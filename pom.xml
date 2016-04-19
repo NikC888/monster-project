@@ -1,17 +1,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.sqa.nc</groupId>
-  <artifactId>BasicStructure</artifactId>
+  <artifactId>monster-project</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>Basic Structure</name>
-  <description>An application which greets and says farewell to user.</description>
+  <name>Monster Project</name>
+  <description>An application which goes to monster, logs in, searches and logs out.</description>
    <dependencies>
-  <dependency>
-   <groupId>junit</groupId>
-   <artifactId>junit</artifactId>
-   <version>4.12</version>
-   <scope>test</scope>
+   <dependency>
+   <groupId>org.seleniumhq.selenium</groupId>
+   <artifactId>selenium-java</artifactId>
+   <version>2.53.0</version>
   </dependency>
+  	<dependency>
+		<groupId>org.testng</groupId>
+		<artifactId>testng</artifactId>
+		<version>6.8.21</version>
+		<scope>test</scope>
+	</dependency>
  </dependencies>
  <build>
   <plugins>

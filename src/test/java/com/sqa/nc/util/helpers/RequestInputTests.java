@@ -11,7 +11,7 @@ package com.sqa.nc.util.helpers;
 
 import java.util.*;
 
-import org.junit.*;
+import org.testng.annotations.*;
 
 /**
  * RequestInputTests //ADDD (description of class)
@@ -48,40 +48,36 @@ public class RequestInputTests {
 		// username = scanner.nextLine();
 	}
 
-	@Before
+	@BeforeMethod
 	public void clearVariables () {
 		userValue = "";
 		question = "";
 	}
 
-	@After
+	@AfterMethod
 	public void displayOutput () {
 		System.out.println("For the question \"" + question + "\", you have given the value of (" + userValue + ")");
 	}
 
-	@Test
-	@Ignore
+	@Test (enabled = false)
 	public void testGetChar () {
 		question = "Please give me the best character: ";
 		userValue = RequestInput.getChar(question, 'a', 'n', 'c', 'z');
 	}
 
-	@Test
-	@Ignore
+	@Test (enabled = false)
 	public void testGetDouble () {
 		question = "Please give me your lucky DOUBLE: ";
 		userValue = RequestInput.getDouble(question);
 	}
 
-	@Test
-	@Ignore
+	@Test (enabled = false)
 	public void testGetInt () {
 		question = "Please give me your lucky number: ";
 		userValue = RequestInput.getInt(question, 1, 2, 3, 4, 5, 6, 7, 8);
 	}
 
-	@Test
-	@Ignore
+	@Test (enabled = false)
 	public void testGetIntWithRange () {
 		question = "Please give me a number within my range: ";
 		userValue = RequestInput.getIntWithRange(question, 0, 10);

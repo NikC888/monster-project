@@ -11,8 +11,6 @@ package com.sqa.nc.util.helpers.math;
 
 import static org.testng.Assert.*;
 
-import java.util.*;
-
 import org.testng.annotations.*;
 
 /**
@@ -26,29 +24,28 @@ import org.testng.annotations.*;
  * @version 1.0.0
  * @since 1.0
  */
-public class MultiplicationTests {
+public class PowerTests {
 
 	@DataProvider
 	public static Object[][] getData () {
 		Object[][] data = {
-							{ new double[] { 2.0, 3.0, 5.0 }, 30.0 },
-							{ new double[] { 5.0 }, 5.0 },
-							{ new double[] { 4.0 }, 4.0 },
-							{ new double[] { 1.0 }, 1.0 },
-							{ new double[] { 3.0 }, 3.0 },
-							{ new double[] { 2.0 }, 2.0 }
+							{ 2.0, 2.0, 4.0 },
+							{ 5.0, 2.0, 25.0 },
+							{ 4.0, 3.0, 64.0 },
+							{ 1.0, 0, 1.0 },
+							{ 3.0, 1.0, 3.0 },
+							{ 2.0, 1.5, 4.0 }
 		};
 		return data;
 	}
 
 	@Test (dataProvider = "getData")
-	public void testMultNumbers (double[] numbers, double expectedResult) {
-		double actualResult = MyMath.multNumbers(numbers);
-		String numbersString = Arrays.toString(numbers);
-		String message = String.format("the product of multiplying all numbers %s together is %.1f", numbersString,
-				actualResult);
+	public void testPowerNumber (double num, double power, double expectedResult) {
+		double actualResult;
+		actualResult = MyMath.powerNumber(num, power);
+		String message = String.format("the result of %.0f to the power of %.0f is %.0f", num, power, actualResult);
 		System.out.println(message);
-		// Assert.assertEquals(message, this.expectedResult, actualResult, 0);
+		// assertEquals(message, expectedResult, actualResult, 0);
 		assertEquals(actualResult, expectedResult, 0, message);
 	}
 }

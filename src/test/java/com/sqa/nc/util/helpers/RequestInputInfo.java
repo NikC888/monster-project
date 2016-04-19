@@ -9,7 +9,7 @@
  */
 package com.sqa.nc.util.helpers;
 
-import org.junit.*;
+import org.testng.annotations.*;
 
 /**
  * RequestInputInfo //ADDD (description of class)
@@ -28,7 +28,7 @@ public class RequestInputInfo {
 	 * @throws java.lang.Exception
 	 */
 	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
+	public static void setUpBeforeClass () throws Exception {
 		System.out.println("before class");
 	}
 
@@ -36,33 +36,33 @@ public class RequestInputInfo {
 	 * @throws java.lang.Exception
 	 */
 	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
+	public static void tearDownAfterClass () throws Exception {
 		System.out.println("after class");
 	}
 
 	/**
 	 * @throws java.lang.Exception
 	 */
-	@Before
-	public void setUp() throws Exception {
+	@BeforeMethod
+	public void setUp () throws Exception {
 		System.out.println("\t before test method ");
 	}
 
 	/**
 	 * @throws java.lang.Exception
 	 */
-	@After
-	public void tearDown() throws Exception {
+	@AfterMethod
+	public void tearDown () throws Exception {
 		System.out.println("\t after test method ");
 	}
 
 	@Test
-	public void test1() {
+	public void test1 () {
 		System.out.println("\t\ttest 1");
 	}
 
 	@Test
-	public void test2() {
+	public void test2 () {
 		System.out.println("\t\ttest 2");
 	}
 }
