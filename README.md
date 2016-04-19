@@ -1,8 +1,8 @@
-#### BasicStructure
+#### Monster Project
 
-### Date
+### April 18, 2016
 
-Basic structure for future projects
+Test/practice app that goes to monster, logs in, searches, and logs out
 
 * Git
 * Java 7
